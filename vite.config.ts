@@ -11,7 +11,11 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    preview: {
+      allowedHosts: ['sense-production-8baa.up.railway.app'],
+    },
     server: {
+      allowedHosts: ['sense-production-8baa.up.railway.app'],
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modify—file watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
